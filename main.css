@@ -1,0 +1,277 @@
+.main{
+    max-width: 1300px;
+    margin: 100px auto;
+}
+
+.heading{
+    text-align: center;
+    max-width: 600px;
+    margin: 0px auto;
+    letter-spacing: 1px;
+}
+
+.heading .bold-text{
+    font-size: 40px;
+}
+
+.upper-text{
+    text-transform: uppercase;
+    color: #17a2b8;
+}
+
+.offer-contents .bold-text{
+    font-size: 35px;
+    font-family: var(--thick-font);
+    text-align: center;
+}
+
+.offer-card-container{
+    margin: 70px auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.offer-card{
+    width: 400px;
+}
+
+.offer-card .bold-text{
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #17a2b8;
+}
+
+.simple-text{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: rgb(82, 82, 82);
+}
+
+.offer-card .card-image{
+    width: 100%;
+    height: 200px;
+}
+
+.all-offers{
+    max-width: 1100px;
+    margin: 100px auto;
+    column-count: 4;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    line-height: 2;
+    padding: 20px;
+}
+
+.offer{
+    color: #17a2b8;
+    font-size: 24px;
+    font-family: var(--text-font);
+}
+
+.featuredProperty{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.propertyInfo-card{
+    width: 500px;
+    height: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.propertyInfo-card .bold-text{
+    font-size: 40px;
+}
+
+.propertyInfo-card .bold-text.price{
+    font-size: 30px;
+    color: #17a2b8;
+}
+
+.propertyImage-card{
+    width: 700px;
+    height: 700px;
+}
+
+.property{
+    background-color: #f5f5f5;
+    padding-top: 100px;
+}
+ 
+.propertyCard-container{
+    margin: 100px auto;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.propertyCard{
+    width: 300px;
+    height:fit-content;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+.image{
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.image:hover img{
+    transform: rotate(3deg) scale(1.1);
+}
+
+.basic-info-icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.propertyAddress{
+    text-align: left;
+    padding:0px 10px
+}
+
+.propertyAddress::after{
+    content: " ";
+    display: block;
+    border-bottom:2px solid #17a2b8;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.propertyAddress:hover::after{
+    transform:scale(1);
+    transform-origin:0% 100%;
+}
+
+
+.propertyOverview{
+    padding: 10px;
+}
+
+.allProject-listing{
+    padding-top: 100px;
+}
+
+.projects-Container{
+    margin: 100px auto;
+}
+
+.project-category{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cat{
+    width: fit-content;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-size: 18px;
+    margin: auto 10px;
+    padding: 0px 30px;
+    border-radius: 3px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.5s;
+}
+
+.cat:hover{
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.cat.active{
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.project-gallery{
+    max-width:1100px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.galleryImage{
+    width: 250px;
+    height: 250px;
+    border-radius: 3px;
+    overflow: hidden;position: relative;
+}
+
+.galleryImage .image{
+    height: 250px;
+    
+    z-index: 1;
+}
+
+
+
+.info{
+    width: 90%;
+    height: 0px;
+    margin: 3px auto;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+}
+
+.info .category, 
+.info .all-link{
+    background-color: #17a2b8;
+    color: #fff;
+    width: fit-content;
+    height: 40px;
+    line-height:40px;
+    padding: 0px 30px;
+}
+
+.galleryImage:hover .info{
+    top: 10px;
+    height: 230px;
+    padding: 20px;
+}
+
+
+@media screen and (max-width:910px){
+    .all-offers{
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width:680px){
+    .all-offers{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width:535px){
+    .all-offers{
+        column-count: 1;
+        text-align: center;
+    }
+}
